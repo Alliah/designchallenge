@@ -101,6 +101,8 @@ buttons, .btn {
 		"h h h h h h h h h h h h"
 		"i i i i i i i i i i i i"
 		"c c c c c c c c c c c c"
+		"f f f f f f . . . . . ."
+		". . . . . . e e e e e e"
 	;
 	grid-gap: 0 30px;
 }
@@ -118,9 +120,9 @@ buttons, .btn {
 	grid-column: 1 / -1;
 }*/
 
-/*.two-columns {
+.two-columns {
 	grid-area: t;
-}*/
+}
 
 .float-l {
 	float: left;
@@ -148,6 +150,13 @@ buttons, .btn {
 }
 
 /*Specific*/
+#featured {
+	grid-area: f;
+}
+
+#other-articles {
+	grid-area: e;
+}
 #navigation-tabs-desktop a{
 	color: #FFF;
 	margin-left: 30px;
@@ -193,6 +202,8 @@ buttons, .btn {
 			"h"
 			"i"
 			"c"
+			"f"
+			"e"
 		;
 	}
 
