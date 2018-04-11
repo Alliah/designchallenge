@@ -66,6 +66,10 @@ ul {
 	margin: 0;
 }
 
+img {
+	vertical-align: middle;
+}
+
 /* Common */
 .m-0 {
 	margin: 0;
@@ -83,9 +87,21 @@ ul {
 .mb-0 {
 	margin-bottom: 0;
 }
+.mb-30 {
+	margin-bottom: 30px;
+}
+.mb-40 {
+	margin-bottom: 40px;
+}
 
-.mr-30 {
+.mr-15 {
+	margin-right: 15px;
+}
+.mr-20 {
 	margin-right: 20px;
+}
+.mr-30 {
+	margin-right: 30px;
 }
 
 .p-10 {
@@ -138,6 +154,12 @@ buttons, .btn {
 	padding: 15px 25px;
 }
 
+.btn-tertiary {
+	background-color: #4A4A4A;
+	color: #FFF;
+	padding: 15px 25px;
+}
+
 .btn-secondary {
 	color: #FF7A30;
 }
@@ -153,7 +175,7 @@ buttons, .btn {
 	grid-template-rows: auto;
 	grid-template-areas:
 		"header header header header header header header header header header header header"
-		"i i i i i i i i i i i i"
+		"hero-image hero-image hero-image hero-image hero-image hero-image hero-image hero-image hero-image hero-image hero-image hero-image"
 		"c c c c c c c c c c c c"
 	;
 	grid-gap: 0 30px;
@@ -169,7 +191,7 @@ buttons, .btn {
 }
 
 .card-wrapper {
-	background-color: #F7F7F7;
+	background-color: #F1F3F5;
 	border-radius: 5px;
 	overflow: hidden;
 	width: 100%;
@@ -177,6 +199,7 @@ buttons, .btn {
 
 .card-list li img{
 	width: 150px;
+	border-radius: 3px;
 }
 
 .card-list li {
@@ -184,8 +207,12 @@ buttons, .btn {
 	padding: 20px 0;
 }
 
+.card-list li:first-of-type {
+	padding-top: 10px;
+}
+
 .card-item-content {
-	width: 70%;
+	width: 60%;
 	display: inline-block;
 }
 
@@ -246,8 +273,17 @@ buttons, .btn {
 	grid-column: 7 / -1;
 }
 
-#other-articles {
-	grid-area: e;
+#car-loan {
+	grid-column: 1 / -1;
+	background-color: #E9ECEF;
+}
+
+#car-loan img {
+	float: right;
+}
+
+#other-new-cars .card-item-content {
+	width: 67%;
 }
 #navigation-tabs-desktop a{
 	color: #FFF;
@@ -260,7 +296,7 @@ buttons, .btn {
 	background-color: #272727;
 	width: 100%;
 	color: #FFF;
-	grid-area: i;
+	grid-area: hero-image;
 }
 
 #main-navigation {
@@ -287,12 +323,19 @@ buttons, .btn {
 	grid-area: c;
 }
 
+#new-cars {
+	background-color: #DEE2E6;
+	padding-bottom: 30px;
+	grid-column: 1 / -1;
+}
+
+
 @media screen and ( max-width: 800px) {
 	.grid-container {
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-areas:
 			"header"
-			"i"
+			"hero-image"
 			"c"
 			"f"
 			"e"
@@ -303,15 +346,6 @@ buttons, .btn {
 
 	.card-wrapper {
 		width: 60%;
-	}
-
-	/*.card-list li img{
-		width: 40%;
-	}*/
-
-	.card-item-content {
-		width: 55%;
-		display: inline-block;
 	}
 
 	.container {
@@ -335,10 +369,32 @@ buttons, .btn {
 
 	.featured {
 		padding-left: 15px;
+		margin-bottom: 0;
 	}
 
 	.other-cards {
 		padding: 0 15px;
+	}
+
+	#car-loan img {
+		display: block;
+		width: 100%;
+		float: none;
+	}
+
+	#featured-new-cars {
+		background-color: #DEE2E6;
+		padding-bottom: 20px;
+	}
+
+	#other-new-cars .card-item-content {
+		width: 55%;
+		display: inline-block;
+	}
+
+	#other-car-promos .card-item-content, #other-used-cars .card-item-content {
+		width: 50%;
+		display: inline-block;
 	}
 
 	#navigation-tabs-desktop{
@@ -357,6 +413,5 @@ buttons, .btn {
 	#main-navigation .logo{
 		width: 100px;
 	}
-
 }
 
